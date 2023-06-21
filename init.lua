@@ -12,4 +12,3 @@ require("plugins.autopair")
 require("plugins.bufferline")
 require("plugins.gitsigns")
 
-
