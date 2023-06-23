@@ -12,3 +12,5 @@ require("plugins.autopair")
 require("plugins.bufferline")
 require("plugins.gitsigns")
 
+require("plugins.lsp")
+require("plugins.cmp")

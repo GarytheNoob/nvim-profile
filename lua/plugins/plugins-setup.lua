@@ -46,6 +46,19 @@ return require('packer').startup(function(use)
     use "lewis6991/gitsigns.nvim" -- 左则git提示
     
     use "olimorris/onedarkpro.nvim"
+    
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
+        "neovim/nvim-lspconfig"
+    }
+    -- 自动补全
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-nvim-lsp"
+    use "L3MON4D3/LuaSnip" -- snippets引擎，不装这个自动补全会出问题
+    use "saadparwaiz1/cmp_luasnip"
+    use "rafamadriz/friendly-snippets"
+    use "hrsh7th/cmp-path" -- 文件路径
 
     if packer_bootstrap then
         require('packer').sync()
