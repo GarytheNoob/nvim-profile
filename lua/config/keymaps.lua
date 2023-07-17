@@ -15,6 +15,11 @@ local nmappings = {
     
     -- nvim-tree
     {from = "<leader>e",   to = ":NvimTreeToggle<CR>"},
+
+    -- bufferline
+    {from = "<C-K>",   to = ":bnext<CR>"},
+    {from = "<C-J>",   to = ":bprevious<CR>"},
+
 }
 
 for _, mapping in ipairs(nmappings) do
