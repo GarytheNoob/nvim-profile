@@ -15,6 +15,12 @@ require("lazy").setup({
     {"christoomey/vim-tmux-navigator"},
     {"p00f/nvim-ts-rainbow"},
 
+    {
+        "numToStr/Comment.nvim",
+        config = function()
+            require("Comment").setup()
+        end
+    },
     { 
         "lukas-reineke/indent-blankline.nvim",
         config = function()
