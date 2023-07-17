@@ -12,6 +12,9 @@ local nmappings = {
     {from = "<leader>sh",   to = "<C-w>s"},
     
     {from = "<leader>nh",   to = ":nohl<CR>"},
+    
+    -- nvim-tree
+    {from = "<leader>e",   to = ":NvimTreeToggle<CR>"},
 }
 
 for _, mapping in ipairs(nmappings) do
