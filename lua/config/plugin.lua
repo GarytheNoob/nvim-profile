@@ -11,7 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 require("lazy").setup({
     {"christoomey/vim-tmux-navigator"},
     {"p00f/nvim-ts-rainbow"},
@@ -69,6 +68,15 @@ require("lazy").setup({
                     max_file_lines = nil,
                 }
             }
+        end
+    },
+
+    {
+        "windwp/nvim-autopairs",
+        config = function()
+            require("nvim-autopairs").setup({
+                map_cr = true
+            })
         end
     },
 
