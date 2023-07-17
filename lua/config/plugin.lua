@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {"christoomey/vim-tmux-navigator"},
     {"p00f/nvim-ts-rainbow"},
+
     { 
         "lukas-reineke/indent-blankline.nvim",
         config = function()
@@ -67,6 +68,21 @@ require("lazy").setup({
                     extended_mode = true,
                     max_file_lines = nil,
                 }
+            }
+        end
+    },
+
+    {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require('gitsigns').setup {
+                signs = {
+                    add = { text = '+' },
+                    change = { text = '~' },
+                    delete = { text = '_' },
+                    topdelete = { text = '‾' },
+                    changedelete = { text = '~' },
+                },
             }
         end
     }
