@@ -60,6 +60,7 @@ return require('packer').startup(function(use)
     use "rafamadriz/friendly-snippets"
     use "hrsh7th/cmp-path" -- 文件路径
 
+    use "lukas-reineke/indent-blankline.nvim"
     if packer_bootstrap then
         require('packer').sync()
     end
