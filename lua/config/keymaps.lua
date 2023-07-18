@@ -21,7 +21,7 @@ local nmappings = {
     {from = "<C-J>",   to = ":bprevious<CR>"},
     
     -- hop
-    {from = "<C-F>",    to = ":HopPattern<CR>"}
+    {from = "<leader>f",    to = ":HopPattern<CR>"}
 }
 
 for _, mapping in ipairs(nmappings) do
