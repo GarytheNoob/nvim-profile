@@ -19,7 +19,9 @@ local nmappings = {
     -- bufferline
     {from = "<C-K>",   to = ":bnext<CR>"},
     {from = "<C-J>",   to = ":bprevious<CR>"},
-
+    
+    -- hop
+    {from = "<C-F>",    to = ":HopPattern<CR>"}
 }
 
 for _, mapping in ipairs(nmappings) do
