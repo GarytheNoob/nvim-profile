@@ -13,155 +13,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     require("config.plugins.hop"),
-    {"christoomey/vim-tmux-navigator"},
-    {"p00f/nvim-ts-rainbow"},
-    {'akinsho/toggleterm.nvim', version = "*", config = true},
+    require("config.plugins.misc"),
+    require("config.plugins.comment"),
+    require("config.plugins.indent"),
+    require("config.plugins.theme"),
+    require("config.plugins.lualine"),
+    require("config.plugins.nvim-tree"),
+    require("config.plugins.treesitter"),
+    require("config.plugins.varioushelper"),
+    require("config.plugins.git"),
+    require("config.plugins.telescope"),
+    require("config.plugins.markdown"),
 
-    {
-        "numToStr/Comment.nvim",
-        config = function()
-            require("Comment").setup()
-        end
-    },
-
-    { 
-        "lukas-reineke/indent-blankline.nvim",
-        config = function()
-            require("indent_blankline").setup {
-                -- for example, context is off by default, use this to turn it on
-                show_current_context = true,
-                show_current_context_start = false,
-            }
-        end
-    },
-
-    {  
-        "olimorris/onedarkpro.nvim",
-        priority = 1000 -- Ensure it loads first
-    },
-
-    { -- lualine
-        "nvim-lualine/lualine.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons", opt = true },
-        config = function()
-            require("lualine").setup({
-                options = {theme = "onedark"}
-            })
-        end
-    },
-    
-    {
-        "nvim-tree/nvim-tree.lua",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function()
-            require("nvim-tree").setup()
-        end
-    },
-
-    -- {
-    --     "akinsho/bufferline.nvim",
-    --     config = function()
-    --         vim.opt.termguicolors = true
-    --
-    --         require("bufferline").setup {
-    --             options = {
-    --                 separator_style = "thick",
-    --
-    --                 style_preset = require('bufferline').style_preset.no_italic,
-    --
-    --                 -- 使用 nvim 内置lsp
-    --                 diagnostics = "nvim_lsp",
-    --                 -- 左侧让出 nvim-tree 的位置
-    --                 offsets = {{
-    --                     filetype = "NvimTree",
-    --                     text = "File Explorer",
-    --                     highlight = "Directory",
-    --                     text_align = "left"
-    --                 }}
-    --             }
-    --         }
-    --     end
-    -- },
-
-    { -- treesitter
-        "nvim-treesitter/nvim-treesitter",
-        config = function()
-            require 'nvim-treesitter.install'.compilers = { 'clang' }
-
-            require'nvim-treesitter.configs'.setup {
-                -- 添加不同语言
-                ensure_installed = "all",
-
-                highlight = { enable = true },
-                indent = { enable = true },
-
-                -- 不同括号颜色区分
-                rainbow = {
-                    enable = true,
-                    extended_mode = true,
-                    max_file_lines = nil,
-                }
-            }
-        end
-    },
-
-    {
-        "windwp/nvim-autopairs",
-        config = function()
-            require("nvim-autopairs").setup({
-                map_cr = true
-            })
-        end
-    },
-
-    -- {
-    --     'phaazon/hop.nvim',
-    --     branch = 'v2', -- optional but strongly recommended
-    --     config = function()
-    --         -- you can configure Hop the way you like here; see :h hop-config
-    --         require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-    --     end
-    -- },
-    
-    {
-        {
-            'nvim-telescope/telescope.nvim', tag = '0.1.2',
-            -- or                              , branch = '0.1.x',
-            dependencies = { 'nvim-lua/plenary.nvim' }
-        }
-    },
-
-    {
-        "iamcco/markdown-preview.nvim",
-        build = function()
-            vim.fn["mkdp#util#install"]()
-        end,
-        ft = "markdown",
-    },
-
-    {
-        "kylechui/nvim-surround",
-        version = "*", -- Use for stability; omit to use `main` branch for the latest features
-        event = "VeryLazy",
-        config = function()
-            require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
-            })
-        end
-    },
-
-    {
-        "lewis6991/gitsigns.nvim",
-        config = function()
-            require('gitsigns').setup {
-                signs = {
-                    add = { text = '+' },
-                    change = { text = '~' },
-                    delete = { text = '_' },
-                    topdelete = { text = '‾' },
-                    changedelete = { text = '~' },
-                },
-            }
-        end
-    }
 })
