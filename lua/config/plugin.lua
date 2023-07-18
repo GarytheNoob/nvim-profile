@@ -110,6 +110,7 @@ require("lazy").setup({
             })
         end
     },
+
     {
         'phaazon/hop.nvim',
         branch = 'v2', -- optional but strongly recommended
@@ -118,6 +119,15 @@ require("lazy").setup({
             require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
         end
     },
+    
+    {
+        {
+            'nvim-telescope/telescope.nvim', tag = '0.1.2',
+            -- or                              , branch = '0.1.x',
+            dependencies = { 'nvim-lua/plenary.nvim' }
+        }
+    },
+
     {
         "lewis6991/gitsigns.nvim",
         config = function()

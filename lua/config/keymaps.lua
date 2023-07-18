@@ -7,6 +7,7 @@ local nmappings = {
     {from = "jk",   to = "<ESC>",   mode = mode_i},
     {from = "J",   to = ":m '>+1<CR>gv=gv'",   mode = mode_v},
     {from = "K",   to = ":m '<-2<CR>gv=gv'",   mode = mode_v},
+    {from = "<C-S>",   to = ":w"},
 
     {from = "<leader>sv",   to = "<C-w>v"},
     {from = "<leader>sh",   to = "<C-w>s"},
@@ -21,7 +22,13 @@ local nmappings = {
     {from = "<C-J>",   to = ":bprevious<CR>"},
     
     -- hop
-    {from = "<leader>f",    to = ":HopPattern<CR>"}
+    {from = "<leader>f",    to = ":HopPattern<CR>"},
+
+    -- treesitter
+    {from = "<leader>ff",   to = require('telescope.builtin').find_files}, 
+    {from = "<leader>fg",   to = require('telescope.builtin').live_grep}, 
+    {from = "<leader>fb",   to = require('telescope.builtin').buffers}, 
+    {from = "<leader>fh",   to = require('telescope.builtin').help_tags}, 
 }
 
 for _, mapping in ipairs(nmappings) do
