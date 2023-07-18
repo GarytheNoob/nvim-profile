@@ -17,9 +17,9 @@ local nmappings = {
     -- nvim-tree
     {from = "<leader>e",   to = ":NvimTreeToggle<CR>"},
 
-    -- bufferline
-    {from = "<C-K>",   to = ":bnext<CR>"},
-    {from = "<C-J>",   to = ":bprevious<CR>"},
+    -- buffer
+    {from = "<C-S-K>",   to = ":bnext<CR>"},
+    {from = "<C-S-J>",   to = ":bprevious<CR>"},
     
     -- hop
     {from = "<leader>f",    to = ":HopPattern<CR>"},
@@ -29,6 +29,9 @@ local nmappings = {
     {from = "<leader>fg",   to = require('telescope.builtin').live_grep}, 
     {from = "<leader>fb",   to = require('telescope.builtin').buffers}, 
     {from = "<leader>fh",   to = require('telescope.builtin').help_tags}, 
+
+    -- toggleterm
+    {from = "<leader>tt",   to = ":ToggleTerm direction=horizontal size=20<CR>"},
 }
 
 for _, mapping in ipairs(nmappings) do

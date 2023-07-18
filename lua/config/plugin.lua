@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {"christoomey/vim-tmux-navigator"},
     {"p00f/nvim-ts-rainbow"},
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
 
     {
         "numToStr/Comment.nvim",
@@ -21,6 +22,7 @@ require("lazy").setup({
             require("Comment").setup()
         end
     },
+
     { 
         "lukas-reineke/indent-blankline.nvim",
         config = function()
