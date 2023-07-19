@@ -29,9 +29,11 @@ return {
             dashboard.button("c", "  Configuration", ":e $MYVIMRC<CR>"),
             dashboard.button("q", "󰗼  Quit Neovim", ":qa<CR>"),
         }
+
         dashboard.section.footer.val = {
-            "", "", "", "", "", "", "", "", "", "", "", "", "", "",
-            "- GarytheNoob -"
+            "", "", "", "", "", "", "", "", "", "", "", "", "",
+            "- GarytheNoob -",
+            os.date("%Y / %m / %d") -- China style date format
         }
         dashboard.opts.opts.noautocmd = true
         alpha.setup(dashboard.opts)
