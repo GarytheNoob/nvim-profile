@@ -26,4 +26,5 @@ require("lazy").setup({
     require("config.plugins.markdown"),
     require("config.plugins.lsp.cmp"),
     require("config.plugins.lsp.setup"),
+    require("config.plugins.alpha-nvim"),
 })

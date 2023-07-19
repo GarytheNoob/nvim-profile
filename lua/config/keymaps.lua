@@ -25,10 +25,10 @@ local nmappings = {
     {from = "<leader>f",    to = ":HopPattern<CR>"},
 
     -- treesitter
-    {from = "<leader>ff",   to = require('telescope.builtin').find_files}, 
-    {from = "<leader>fg",   to = require('telescope.builtin').live_grep}, 
-    {from = "<leader>fb",   to = require('telescope.builtin').buffers}, 
-    {from = "<leader>fh",   to = require('telescope.builtin').help_tags}, 
+    {from = "<leader>ff",   to = require('telescope.builtin').find_files},
+    {from = "<leader>fg",   to = require('telescope.builtin').live_grep},
+    {from = "<leader>fb",   to = require('telescope.builtin').buffers},
+    {from = "<leader>fh",   to = require('telescope.builtin').help_tags},
 
     -- toggleterm
     {from = "<leader>tt",   to = ":ToggleTerm direction=horizontal size=20<CR>"},
