@@ -24,4 +24,6 @@ require("lazy").setup({
     require("config.plugins.git"),
     require("config.plugins.telescope"),
     require("config.plugins.markdown"),
+    require("config.plugins.lsp.cmp"),
+    require("config.plugins.lsp.setup"),
 })
