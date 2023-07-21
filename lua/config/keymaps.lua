@@ -11,16 +11,16 @@ local nmappings = {
 
     {from = "<leader>sv",   to = "<C-w>v"},
     {from = "<leader>sh",   to = "<C-w>s"},
-    
+
     {from = "<leader>nh",   to = ":nohl<CR>"},
-    
+
     -- nvim-tree
     {from = "<leader>e",   to = ":NvimTreeToggle<CR>"},
 
     -- buffer
     {from = "<C-S-K>",   to = ":bnext<CR>"},
     {from = "<C-S-J>",   to = ":bprevious<CR>"},
-    
+
     -- hop
     {from = "<leader>f",    to = ":HopPattern<CR>"},
 
