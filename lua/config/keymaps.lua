@@ -21,6 +21,9 @@ local nmappings = {
 
     {from = "<leader>nh",   to = vim.cmd.nohl},
 
+    -- Show Lazy Menu
+    {from = "<leader>lz",   to = vim.cmd.Lazy},
+
     -- nvim-tree
     {from = "<leader>e",   to = vim.cmd.NvimTreeToggle},
 
@@ -42,7 +45,6 @@ local nmappings = {
 
     -- display greeting screeen
     {from = "<leader>grt",   to = vim.cmd.Alpha},
-
 }
 
 for _, mapping in ipairs(nmappings) do

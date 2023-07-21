@@ -41,7 +41,7 @@ return {
         }
 
         dashboard.section.footer.val = {
-            "", "", "", "", "", "", "", "", "", "", "", "", "",
+            "", "", "", "", "", "",
             "- GarytheNoob -",
             os.date("%Y / %m / %d") -- China style date format
         }
