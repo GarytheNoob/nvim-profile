@@ -16,17 +16,7 @@ P = {
     {
         "williamboman/mason-lspconfig.nvim",
         config = function()
-            require("mason-lspconfig").setup({
-                -- 确保安装，根据需要填写
-                ensure_installed = {
-                    "lua_ls",
-                    "clangd",
-                    "jsonls",
-                    "bashls",
-                    "pylsp",
-                    "pyre",
-                },
-            })
+            require("mason-lspconfig").setup()
         end
     },
     {
