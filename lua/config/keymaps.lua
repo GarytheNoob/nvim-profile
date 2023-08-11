@@ -16,8 +16,13 @@ local nmappings = {
     {from = "<C-S>",   to = ":w<CR>"},
     {from = "<C-Q>",   to = ":qa<CR>"},
 
+
+    -- Resize split panels
     {from = "<leader>sv",   to = "<C-w>v"},
     {from = "<leader>sh",   to = "<C-w>s"},
+    {from = "<leader>ww",   to = "<C-w>="},
+    {from = "<leader>w,",   to = "<C-w><"},
+    {from = "<leader>w.",   to = "<C-w>>"},
 
     {from = "<leader>nh",   to = vim.cmd.nohl},
 
