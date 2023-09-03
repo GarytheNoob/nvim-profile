@@ -37,7 +37,7 @@ return {
         dashboard.section.footer.val = {
             "", "", "", "", "", "",
             "- GarytheNoob -",
-            os.date("%Y / %m / %d") -- China style date format
+            os.date("%Y / %m / %d") -- Chinese style date format
         }
         dashboard.opts.opts.noautocmd = true
         alpha.setup(dashboard.opts)
