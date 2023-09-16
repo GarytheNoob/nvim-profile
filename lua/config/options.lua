@@ -31,6 +31,8 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 
+vim.notify = require("notify")
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
