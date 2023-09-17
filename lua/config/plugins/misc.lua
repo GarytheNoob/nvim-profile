@@ -2,6 +2,7 @@ return {
     {"christoomey/vim-tmux-navigator"},
     {"p00f/nvim-ts-rainbow"},
     {'akinsho/toggleterm.nvim', version = "*", config = true},
+    {"mg979/vim-visual-multi"},
     {"stevearc/dressing.nvim", event = "VeryLazy"},
     {
         "windwp/nvim-autopairs",
