@@ -32,7 +32,7 @@ return {
                         require('luasnip').lsp_expand(args.body)
                     end,
                 },
-                window = {
+                window = { -- add border to the tooltip window of cmp
                     completion = {
                         border = "rounded",
                     },
