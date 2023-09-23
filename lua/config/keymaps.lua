@@ -55,7 +55,11 @@ local nmappings = {
     {from = "<leader>tt",   to = toggle_term},
 
     -- display greeting screeen
-    {from = "<leader>grt",   to = vim.cmd.Alpha},
+    {from = "<leader>grt",  to = vim.cmd.Alpha},
+
+    -- icon-picker
+    {from = "<leader>ip",   to = vim.cmd.IconPickerNormal},
+    -- {from = "<leader>iy",   to = vim.cmd.IconPickerYank},
 }
 
 for _, mapping in ipairs(nmappings) do
