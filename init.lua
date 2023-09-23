@@ -16,7 +16,7 @@
 -- GitHub: https://github.com/GarytheNoob
 
 
-vim.opt.termguicolors = true
+vim.opt.termguicolors = true -- some plugins may need this
 require("config.plugin")
 require("config.options")
 require("config.keymaps")

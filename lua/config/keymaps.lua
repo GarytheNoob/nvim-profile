@@ -6,6 +6,11 @@ local function toggle_term()
     vim.cmd(term_command)
 end
 
+local function close_current_buffer()
+    vim.cmd("bd")
+    vim.cmd("bprev")
+end
+
 local mode_nv = { "n", "v" }
 local mode_v = { "v" }
 local mode_i = { "i" }
@@ -25,6 +30,7 @@ local nmappings = {
     {from = "<leader>w.",   to = "<C-w>>"},
 
     {from = "<leader>nh",   to = vim.cmd.nohl},
+    {from = "<leader>qq",   to = close_current_buffer},
 
     -- Show Lazy Menu
     {from = "<leader>lz",   to = vim.cmd.Lazy},
