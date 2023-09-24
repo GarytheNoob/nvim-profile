@@ -64,3 +64,18 @@ end
 
 -- 將自定義函數與指令映射
 vim.cmd('command! InsLogo lua InsertLogo()')
+
+
+require("neodev").setup({})
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+require("lspconfig").lua_ls.setup({
+    settings = {
+        Lua = {
+            completion = {
+                callSnippet = "Replace"
+            }
+        },
+    },
+    capabilities = capabilities,
+})
