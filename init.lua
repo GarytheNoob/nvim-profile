@@ -19,4 +19,3 @@ vim.opt.termguicolors = true -- some plugins may need this
 require("config.plugin")
 require("config.options")
 require("config.keymaps")
-vim.cmd("colorscheme onedark_vivid")
