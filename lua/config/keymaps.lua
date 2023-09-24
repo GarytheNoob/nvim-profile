@@ -6,7 +6,7 @@ local function toggle_term()
     vim.cmd(term_command)
 end
 
-local function close_current_buffer()
+local function close_current_buffer() -- BUGGY
     vim.cmd("bd")
     vim.cmd("bprev")
 end
@@ -14,6 +14,10 @@ end
 local mode_nv = { "n", "v" }
 local mode_v = { "v" }
 local mode_i = { "i" }
+
+------------------------------------------------------------------------------
+-- KEYBINDS STARTS HERE    structure from theniceboy/nvim
+------------------------------------------------------------------------------
 local nmappings = {
     {from = "jk",   to = "<ESC>",   mode = mode_i},
     {from = "J",   to = ":m '>+1<CR>gv=gv'",   mode = mode_v},
@@ -30,7 +34,7 @@ local nmappings = {
     {from = "<leader>w.",   to = "<C-w>>"},
 
     {from = "<leader>nh",   to = vim.cmd.nohl},
-    {from = "<leader>qq",   to = close_current_buffer},
+    {from = "<leader>qq",   to = vim.cmd.bd},
 
     -- Show Lazy Menu
     {from = "<leader>lz",   to = vim.cmd.Lazy},
