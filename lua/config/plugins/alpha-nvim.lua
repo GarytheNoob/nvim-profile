@@ -25,13 +25,13 @@ return {
         }
 
         dashboard.section.buttons.val = {
-            dashboard.button("f", " [F] Find file", ":Telescope find_files <CR>"),
-            dashboard.button("e", " [E] New file", ":ene <BAR> startinsert <CR>"),
-         -- dashboard.button("p", " [P]  Find project", ":Telescope projects <CR>"),
-            dashboard.button("r", " [R] Recently used files", ":Telescope oldfiles <CR>"),
-            dashboard.button("t", "󱎸 [T] Find text", ":Telescope live_grep <CR>"),
-            dashboard.button("c", " [C] Configuration", ":e ~/.config/nvim/<CR>"),
-            dashboard.button("q", "󰗼 [Q] Quit Neovim", ":qa<CR>"),
+            dashboard.button("f", "   Find file", ":Telescope find_files <CR>"),
+            dashboard.button("e", "   New file", ":ene <BAR> startinsert <CR>"),
+         -- dashboard.button("p", "   Find project", ":Telescope projects <CR>"),
+            dashboard.button("r", "   Recently used files", ":Telescope oldfiles <CR>"),
+            dashboard.button("t", "󱎸   Find text", ":Telescope live_grep <CR>"),
+            dashboard.button("c", "   Configuration", ":e ~/.config/nvim/<CR>"),
+            dashboard.button("q", "󰗼   Quit Neovim", ":qa<CR>"),
         }
 
         dashboard.section.footer.val = {
