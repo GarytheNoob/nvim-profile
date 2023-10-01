@@ -19,7 +19,7 @@ return {
 
             require("luasnip.loaders.from_vscode").lazy_load()
 
-            -- 下面会用到这个函数
+            -- Use the func later
             local check_backspace = function()
                 local col = vim.fn.col "." - 1
                 return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"

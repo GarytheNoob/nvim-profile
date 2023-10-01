@@ -6,7 +6,9 @@ local function toggle_term()
     vim.cmd(term_command)
 end
 
-local function close_current_buffer() -- BUGGY
+local function close_current_buffer()
+    -- FIX: some buffers cannot be run "bd" or they will creash;
+    --      might have sth to do with lazy.nvim
     vim.cmd("bd")
     vim.cmd("bprev")
 end
@@ -15,9 +17,7 @@ local mode_nv = { "n", "v" }
 local mode_v = { "v" }
 local mode_i = { "i" }
 
-------------------------------------------------------------------------------
--- KEYBINDS STARTS HERE    structure from theniceboy/nvim
-------------------------------------------------------------------------------
+-- NOTE: KEYBINDS STARTS HERE    structure from theniceboy/nvim
 local nmappings = {
     {from = "jk",   to = "<ESC>",   mode = mode_i},
     {from = "J",   to = ":m '>+1<CR>gv=gv'",   mode = mode_v},

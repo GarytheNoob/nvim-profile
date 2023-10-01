@@ -4,13 +4,13 @@ return { -- treesitter
         require 'nvim-treesitter.install'.compilers = { 'clang' }
 
         require'nvim-treesitter.configs'.setup {
-            -- 添加不同语言
+            -- languages
             ensure_installed = "all",
 
             highlight = { enable = true },
             indent = { enable = true },
 
-            -- 不同括号颜色区分
+            -- brackets color
             rainbow = {
                 enable = true,
                 extended_mode = true,
