@@ -1,6 +1,28 @@
 local opt = vim.opt
 
-opt.guifont = "JetBrainsMono Nerd Font:h16"
+-- 获取当前连接的显示器数量
+function Get_connected_monitors()
+    local result = vim.fn.system('xrandr -q | grep " connected" | wc -l') -- HACK: not on linux? no X open?
+    return tonumber(result)
+end
+-- 设置字体大小
+function Set_font_size()
+    local connected_monitors = Get_connected_monitors()
+
+    if connected_monitors > 1 then
+        vim.cmd('set guifont=JetBrainsMono\\ Nerd\\ Font:h16')
+    else
+        vim.cmd('set guifont=JetBrainsMono\\ Nerd\\ Font:h10')
+    end
+end
+
+-- 自动执行字体设置
+Set_font_size()
+
+-- 自动监测连接状态，并在连接状态变化时重新设置字体大小
+vim.cmd('autocmd FocusGained,BufEnter * lua Set_font_size()')
+vim.cmd('autocmd FocusLost,BufLeave * lua Set_font_size()')
+
 opt.linespace = -1
 
 opt.relativenumber = true
