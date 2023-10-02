@@ -11,18 +11,28 @@ local function close_current_buffer()
     vim.cmd("bprev")
 end
 
+
+-- NOTE: KEYBINDS STARTS HERE    structure from theniceboy/nvim
 local mode_nv = { "n", "v" }
 local mode_v = { "v" }
 local mode_i = { "i" }
-
--- NOTE: KEYBINDS STARTS HERE    structure from theniceboy/nvim
 local nmappings = {
+    -- escape INSERT mode
     {from = "jk",   to = "<ESC>",   mode = mode_i},
+
+    -- moving selected lines
     {from = "J",   to = ":m '>+1<CR>gv=gv'",   mode = mode_v},
     {from = "K",   to = ":m '<-2<CR>gv=gv'",   mode = mode_v},
+
+    -- hotkeys for saving(writing) and quitting
     {from = "<C-S>",   to = ":w<CR>"},
     {from = "<C-Q>",   to = ":qa<CR>"},
 
+    -- turn the highlight of after searching
+    {from = "<leader>nh",   to = vim.cmd.nohl},
+
+    -- close the current buffer and open another
+    {from = "<leader>qq",   to = close_current_buffer}, -- TODO: Inline function?
 
     -- Resize split panels
     {from = "<leader>sv",   to = "<C-w>v"},
@@ -30,9 +40,6 @@ local nmappings = {
     {from = "<leader>ww",   to = "<C-w>="},
     {from = "<leader>w,",   to = "<C-w><"},
     {from = "<leader>w.",   to = "<C-w>>"},
-
-    {from = "<leader>nh",   to = vim.cmd.nohl},
-    {from = "<leader>qq",   to = close_current_buffer},
 
     -- Show Lazy Menu
     {from = "<leader>lz",   to = vim.cmd.Lazy},
@@ -64,6 +71,7 @@ local nmappings = {
     -- {from = "<leader>iy",   to = vim.cmd.IconPickerYank},
 }
 
+-- I love this way to set keybinds
 for _, mapping in ipairs(nmappings) do
 	vim.keymap.set(mapping.mode or "n", mapping.from, mapping.to, { noremap = true })
 end
