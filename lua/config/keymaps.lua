@@ -7,8 +7,6 @@ local function toggle_term()
 end
 
 local function close_current_buffer()
-    -- FIX: some buffers cannot be run "bd" or they will creash;
-    --      might have sth to do with lazy.nvim
     vim.cmd("bd")
     vim.cmd("bprev")
 end
@@ -34,7 +32,7 @@ local nmappings = {
     {from = "<leader>w.",   to = "<C-w>>"},
 
     {from = "<leader>nh",   to = vim.cmd.nohl},
-    {from = "<leader>qq",   to = vim.cmd.bd},
+    {from = "<leader>qq",   to = close_current_buffer},
 
     -- Show Lazy Menu
     {from = "<leader>lz",   to = vim.cmd.Lazy},

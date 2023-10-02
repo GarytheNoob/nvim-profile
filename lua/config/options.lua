@@ -6,7 +6,7 @@ function Get_connected_monitors()
     return tonumber(result)
 end
 -- set display font size 
-function Set_font_size() 
+function Set_font_size()
     local connected_monitors = Get_connected_monitors()
 
     if connected_monitors > 1 then

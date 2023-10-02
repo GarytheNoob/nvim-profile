@@ -1,21 +1,27 @@
-return { -- treesitter
-    "nvim-treesitter/nvim-treesitter",
-    config = function()
-        require 'nvim-treesitter.install'.compilers = { 'clang' }
+return {
+    {"lincheney/nvim-ts-rainbow"}, -- NOTE: Change origin - p00f stopped maintaining
+    { -- treesitter
+        "nvim-treesitter/nvim-treesitter",
+        config = function()
+            require 'nvim-treesitter.install'.compilers = { 'clang' }
 
-        require'nvim-treesitter.configs'.setup {
-            -- languages
-            ensure_installed = "all",
+            require'nvim-treesitter.configs'.setup {
+                -- languages
+                ensure_installed = "all",
+                auto_install = true,
+                sync_install = true,
+                ignore_install = {},
+                modules = {},
+                highlight = { enable = true },
+                indent = { enable = true },
 
-            highlight = { enable = true },
-            indent = { enable = true },
-
-            -- brackets color
-            rainbow = {
-                enable = true,
-                extended_mode = true,
-                max_file_lines = nil,
+                -- brackets color
+                rainbow = {
+                    enable = true,
+                    extended_mode = true,
+                    max_file_lines = nil,
+                }
             }
-        }
-    end
+        end
+    }
 }
