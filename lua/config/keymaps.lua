@@ -52,7 +52,7 @@ local nmappings = {
     {from = "<leader>J",   to = vim.cmd.bprev},
 
     -- hop
-    {from = "<leader>f",    to = vim.cmd.HopPattern},
+    {from = "<leader>F",    to = vim.cmd.HopPattern},
 
     -- treesitter
     {from = "<leader>ff",   to = require('telescope.builtin').find_files},

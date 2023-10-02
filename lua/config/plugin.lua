@@ -30,4 +30,5 @@ require("lazy").setup({
     require("config.plugins.alpha-nvim"),
     require("config.plugins.bufferline"),
     require("config.plugins.ui"),
+    require("config.plugins.project"),
 })
