@@ -10,7 +10,7 @@ return {
                 offsets = {
                     {
                         filetype = "NvimTree",
-                        text = "  Working DIR",
+                        text = "  Current Working DIR",
                         highlight =  "Directory",
                         text_align = "center",
                         separator = true,
