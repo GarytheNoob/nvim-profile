@@ -32,4 +32,5 @@ require("lazy").setup({
     require("config.plugins.ui"),
     require("config.plugins.project"),
     require("config.plugins.input"),
+    require("config.plugins.latex"),
 })
