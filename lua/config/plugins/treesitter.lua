@@ -12,7 +12,11 @@ return {
                 sync_install = true,
                 ignore_install = {},
                 modules = {},
-                highlight = { enable = true },
+                highlight = {
+                    enable = true,
+                    disable = { "latex" },
+                    additional_vim_regex_highlighting = { "latex", "markdown" },
+                },
                 indent = { enable = true },
 
                 -- brackets color
