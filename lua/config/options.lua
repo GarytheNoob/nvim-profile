@@ -13,7 +13,7 @@ function Set_font_size()
     local connected_monitors = Get_connected_monitors()
 
     if connected_monitors > 1 then
-        vim.cmd('set guifont=JetBrainsMono\\ Nerd\\ Font:h16')
+        vim.cmd('set guifont=JetBrainsMono\\ Nerd\\ Font:h14')
     else
         vim.cmd('set guifont=JetBrainsMono\\ Nerd\\ Font:h10')
     end

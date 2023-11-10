@@ -32,7 +32,7 @@ local nmappings = {
     {from = "<leader>nh",   to = vim.cmd.nohl},
 
     -- close the current buffer and open another
-    {from = "<leader>qq",   to = close_current_buffer}, -- TODO: Inline function?
+    {from = "<leader>qq",   to = close_current_buffer},
 
     -- Resize split panels
     {from = "<leader>sv",   to = "<C-w>v"},
