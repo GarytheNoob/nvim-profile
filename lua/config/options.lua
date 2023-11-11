@@ -38,14 +38,19 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
--- no wrap except markdown
+-- no wrap except certain filetype
 opt.wrap = false
 vim.cmd([[
   augroup MarkdownSettings
     autocmd!
     autocmd FileType markdown setlocal wrap
+    autocmd FileType markdown setlocal textwidth=80
+    autocmd FileType tex setlocal wrap
+    autocmd FileType tex setlocal textwidth=80
   augroup END
 ]])
+
+opt.colorcolumn={80}
 
 -- try to enable cursorline
 opt.cursorline = true -- HACK: Conflict with the scheme? idk why not showing
@@ -68,6 +73,12 @@ opt.termguicolors = true -- NOTE: This is already at the first line in `init.lua
 -- I love sign columns
 opt.signcolumn = "yes"
 
+-- diagnostic
+vim.diagnostic.config{
+    underline = false,
+}
+
+
 -- Use the plugin for notifications
 vim.notify = require("notify")
 
@@ -81,19 +92,3 @@ function InsertLogo()
     vim.fn.append(vim.fn.line('.'), file_content)
 end
 vim.cmd('command! InsLogo lua InsertLogo()')
-
-
-
--- NOTE: config neodev and lsp here
-require("neodev").setup({})
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require("lspconfig").lua_ls.setup({
-    settings = {
-        Lua = {
-            completion = {
-                callSnippet = "Replace"
-            }
-        },
-    },
-    capabilities = capabilities,
-})

@@ -1,8 +1,7 @@
-vim.g.mapleader = " "
-
 local function toggle_term()
     local current_file_directory = vim.fn.expand("%:p:h")
-    local term_command = string.format("ToggleTerm direction=horizontal size=20 cwd=%s", vim.fn.shellescape(current_file_directory))
+    local term_command = string.format("ToggleTerm direction=horizontal size=20 cwd=%s",
+        vim.fn.shellescape(current_file_directory))
     vim.cmd(term_command)
 end
 
@@ -73,6 +72,6 @@ local nmappings = {
 
 -- I love this way to set keybinds
 for _, mapping in ipairs(nmappings) do
-	vim.keymap.set(mapping.mode or "n", mapping.from, mapping.to, { noremap = true })
+    vim.keymap.set(mapping.mode or "n", mapping.from, mapping.to, { noremap = true })
 end
 
