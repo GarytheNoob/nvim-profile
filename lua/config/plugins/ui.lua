@@ -14,11 +14,19 @@ return {
         end
     },
     {
+        "rcarriga/nvim-notify",
+        config = function ()
+            require("notify").setup({
+                max_winth = 15
+            })
+            vim.notify = require("notify")
+        end
+    },
+    {
         "folke/noice.nvim",
         event = "VeryLazy",
         dependencies = {
             "MunifTanjim/nui.nvim",
-            "rcarriga/nvim-notify",
         },
         config = function()
             require("noice").setup({
