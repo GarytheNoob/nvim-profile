@@ -20,8 +20,8 @@ local nmappings = {
     {from = "jk",   to = "<ESC>",   mode = mode_i},
 
     -- moving selected lines
-    {from = "J",   to = ":m '>+1<CR>gv=gv'",   mode = mode_v},
-    {from = "K",   to = ":m '<-2<CR>gv=gv'",   mode = mode_v},
+    {from = "K",   to = ":m '<-2<CR>gv=gv",   mode = mode_v},
+    {from = "J",   to = ":m '>+1<CR>gv=gv",   mode = mode_v},
 
     -- hotkeys for saving(writing) and quitting
     {from = "<C-S>",   to = ":w<CR>"},

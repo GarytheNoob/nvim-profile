@@ -17,7 +17,8 @@ return {
         "rcarriga/nvim-notify",
         config = function ()
             require("notify").setup({
-                max_winth = 15
+                max_winth = 15,
+                minimum_width = 5
             })
             vim.notify = require("notify")
         end
