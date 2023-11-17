@@ -69,6 +69,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 opt.termguicolors = true -- NOTE: This is already at the first line in `init.lua`, no real need here
+vim.o.background = "dark"
 
 -- I love sign columns
 opt.signcolumn = "yes"
