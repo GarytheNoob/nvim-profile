@@ -18,19 +18,22 @@ function Set_font_size()
         vim.cmd('set guifont=JetBrainsMono\\ Nerd\\ Font:h10')
     end
 end
-
 -- run the function to set font size at start
 Set_font_size()
-
+opt.linespace = -1
 -- run the function whenever entering/leaving a buffer
 vim.cmd('autocmd FocusGained,BufEnter * lua Set_font_size()')
 vim.cmd('autocmd FocusLost,BufLeave * lua Set_font_size()')
 
-opt.linespace = -1
 
--- numbers
+
+-------------------------------------
+-- General Config
+-------------------------------------
+-- gutters
 opt.relativenumber = true
 opt.number = true
+opt.signcolumn = "yes"
 
 -- tab
 opt.tabstop = 4
@@ -50,14 +53,15 @@ vim.cmd([[
   augroup END
 ]])
 
+-- visual
 opt.colorcolumn={80}
-
--- try to enable cursorline
-opt.cursorline = true -- HACK: Conflict with the scheme? idk why not showing
+opt.cursorline = true
+opt.background = "dark"
 
 -- use mouse
 opt.mouse:append("a")
--- use system clipboard as well
+
+-- use system clipboard
 opt.clipboard:append("unnamedplus")
 
 -- enable spliting window/pane
@@ -67,12 +71,6 @@ opt.splitbelow = true
 -- cmd cases
 opt.ignorecase = true
 opt.smartcase = true
-
-opt.termguicolors = true -- NOTE: This is already at the first line in `init.lua`, no real need here
-vim.o.background = "dark"
-
--- I love sign columns
-opt.signcolumn = "yes"
 
 -- diagnostic
 vim.diagnostic.config{

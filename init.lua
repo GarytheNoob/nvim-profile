@@ -18,6 +18,7 @@
 -- initial settings
 vim.opt.termguicolors = true -- some plugins may need this
 vim.g.mapleader = " "
+
 require("config.plugin")
 require("config.options")
 require("config.customcmd")

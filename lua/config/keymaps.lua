@@ -1,13 +1,3 @@
-local function toggle_term()
-    local current_file_directory = vim.fn.expand("%:p:h")
-    local term_command = string.format("ToggleTerm direction=horizontal size=20 cwd=%s",
-        vim.fn.shellescape(current_file_directory))
-    vim.cmd(term_command)
-end
-
-
-
--- NOTE: KEYBINDS STARTS HERE    structure from theniceboy/nvim
 local mode_nv = { "n", "v" }
 local mode_v = { "v" }
 local mode_i = { "i" }
@@ -57,7 +47,7 @@ local nmappings = {
     {from = "<leader>fr",   to = require('telescope.builtin').oldfiles},
 
     -- toggleterm
-    {from = "<leader>tt",   to = toggle_term},
+    {from = "<leader>tt",   to = vim.cmd.OpenTerm},
 
     -- display greeting screeen
     {from = "<leader>grt",  to = vim.cmd.Alpha},
