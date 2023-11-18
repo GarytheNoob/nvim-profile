@@ -54,12 +54,16 @@ vim.cmd([[
 ]])
 
 -- visual
-opt.colorcolumn={80}
+opt.termguicolors = true
+opt.colorcolumn = {80}
 opt.cursorline = true
 opt.background = "dark"
 
 -- use mouse
 opt.mouse:append("a")
+
+-- keybind init
+vim.g.mapleader = " "
 
 -- use system clipboard
 opt.clipboard:append("unnamedplus")
