@@ -21,5 +21,5 @@ vim.g.mapleader = " "
 
 require("config.plugin")
 require("config.options")
-require("config.customcmd")
+require("custom.customcmd")
 require("config.keymaps")

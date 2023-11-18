@@ -54,7 +54,10 @@ local nmappings = {
 
     -- icon-picker
     {from = "<leader>ip",   to = vim.cmd.IconPickerNormal},
-    -- {from = "<leader>iy",   to = vim.cmd.IconPickerYank},
+
+    -- LuaSnip
+    {from = "<C-L>",        to = function() require("luasnip").jump(1) end, mode = {"i", "s"} },
+    {from = "<C-H>",        to = function() require("luasnip").jump(-1) end, mode = {"i", "s"} },
 }
 
 -- I love this way to set keybinds
