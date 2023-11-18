@@ -54,6 +54,7 @@ local nmappings = {
     {from = "<leader>fg",   to = require('telescope.builtin').live_grep},
     {from = "<leader>fb",   to = require('telescope.builtin').buffers},
     {from = "<leader>fh",   to = require('telescope.builtin').help_tags},
+    {from = "<leader>fr",   to = require('telescope.builtin').oldfiles},
 
     -- toggleterm
     {from = "<leader>tt",   to = toggle_term},

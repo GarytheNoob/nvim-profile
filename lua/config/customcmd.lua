@@ -1,19 +1,3 @@
--- FILENAME: <++>
--- DESCRIPTION: <++>
--- ORIGIN: <++>
---
--- This file is partly or fully edited by
---  ▄▄▄  ▄  ▄▄  ▄ ▄      ▄▄     
---  █   █ █ █▄▀ █▄█   ▄█▀▀▀▀█▄  
---  █▄█ █▀█ █ █  █   █▀      ▀▀ 
---  ▄▄▄ ▄ ▄ ▄▄▄      █    ▀▄▄   
---   █  █▄█ █▄▄      █▄     ▀█▄ 
---   █  █ █ █▄▄       ▀█▄▄▄▄█▀  
---  ▄▄▄ ▄▄▄ ▄▄▄ ▄▄     ▄▄█▀     
---  █ █ █ █ █ █ █▄▀  ▄█▀        
---  █ █ █▄█ █▄█ █▄▀   ▀█▄▄      
---                       ▀▀     
--- GitHub: https://github.com/GarytheNoob
 
 local commands={
     {
