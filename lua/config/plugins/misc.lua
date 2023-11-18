@@ -1,6 +1,10 @@
 return {
-    {"christoomey/vim-tmux-navigator"},
-    {'akinsho/toggleterm.nvim', version = "*", config = true},
+    {
+        "christoomey/vim-tmux-navigator"
+    },
+    {
+        'akinsho/toggleterm.nvim', version = "*", config = true
+    },
     {
         "norcalli/nvim-colorizer.lua",
         config = function()

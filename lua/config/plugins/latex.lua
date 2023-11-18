@@ -2,14 +2,13 @@ return {
     {
         "lervag/vimtex",
         config = function()
-            vim.cmd([[
-                let g:tex_flavor = 'latex'
-                let g:vimtex_quickfix_mode = 0
-                let g:vimtex_view_general_viewer = 'zathura'
-                let g:vimtex_view_method = 'zathura'
-                set conceallevel=1
-                let g:tex_conceal='abdmg'
-            ]])
-        end
+            vim.g.tex_flavor = 'latex'
+            vim.g.vimtex_quickfix_mode = 0
+            vim.g.vimtex_view_general_viewer = 'zathura'
+            vim.g.vimtex_view_method = 'zathura'
+            vim.opt.conceallevel=1
+            vim.g.tex_conceal='abdmg'
+        end,
+        ft = "tex"
     },
 }

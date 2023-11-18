@@ -25,6 +25,7 @@ local commands={
     }
 }
 
+
 for _, command in ipairs(commands) do
     vim.api.nvim_create_user_command(command.cmd, command.func, {})
 end

@@ -5,7 +5,7 @@ local opt = vim.opt
 -------------------------------------
 -- get # of Active Monitor 
 function Get_connected_monitors()
-    local result = vim.fn.system('xrandr -q | grep " connected" | wc -l') -- HACK: not on linux? no X open?
+    local result = vim.fn.system('xrandr -q | grep " connected" | wc -l') --TODO: not on linux? no X open?
     return tonumber(result)
 end
 -- set display font size 
