@@ -9,11 +9,6 @@ return {
                 }
             })
             vim.cmd("colorscheme onedark_vivid")
-            vim.cmd([[
-            highlight Visual guibg=#abb2bf
-            highlight Visual gui=reverse
-            highlight Visual guibg=#282c34
-            ]])
         end
     },
     {

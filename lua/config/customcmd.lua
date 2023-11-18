@@ -1,6 +1,6 @@
--- FILENAME: init.lua
--- DESCRIPTION: entrance of the config file of neovim
--- ORIGIN: NONE
+-- FILENAME: <++>
+-- DESCRIPTION: <++>
+-- ORIGIN: <++>
 --
 -- This file is partly or fully edited by
 --  ▄▄▄  ▄  ▄▄  ▄ ▄      ▄▄     
@@ -15,10 +15,24 @@
 --                       ▀▀     
 -- GitHub: https://github.com/GarytheNoob
 
--- initial settings
-vim.opt.termguicolors = true -- some plugins may need this
-vim.g.mapleader = " "
-require("config.plugin")
-require("config.options")
-require("config.customcmd")
-require("config.keymaps")
+local commands={
+    {
+        cmd = 'InsLogo',
+        func = function()
+            local logopath = '~/template/logo'
+            local file_content = vim.fn.readfile(vim.fn.expand(logopath))
+            vim.fn.append(vim.fn.line('.'), file_content)
+        end
+    },
+    {
+        cmd = 'BufClose',
+        func = function()
+            vim.cmd("bd")
+            vim.cmd("bprev")
+        end
+    }
+}
+
+for _, command in ipairs(commands) do
+    vim.api.nvim_create_user_command(command.cmd, command.func, {})
+end

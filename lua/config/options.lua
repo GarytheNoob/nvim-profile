@@ -79,15 +79,12 @@ vim.diagnostic.config{
     underline = false,
 }
 
-
-
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- Special cmd for adding logo/watermark to the file
-function InsertLogo()
-    local logopath = '~/template/logo'
-    local file_content = vim.fn.readfile(vim.fn.expand(logopath))
-    vim.fn.append(vim.fn.line('.'), file_content)
-end
-vim.cmd('command! InsLogo lua InsertLogo()')
+
+vim.cmd([[
+            highlight Visual guibg=#abb2bf
+            highlight Visual gui=reverse
+            highlight Visual guibg=#282c34
+        ]])

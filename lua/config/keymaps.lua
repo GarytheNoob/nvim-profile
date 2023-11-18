@@ -5,10 +5,6 @@ local function toggle_term()
     vim.cmd(term_command)
 end
 
-local function close_current_buffer()
-    vim.cmd("bd")
-    vim.cmd("bprev")
-end
 
 
 -- NOTE: KEYBINDS STARTS HERE    structure from theniceboy/nvim
@@ -31,7 +27,7 @@ local nmappings = {
     {from = "<leader>nh",   to = vim.cmd.nohl},
 
     -- close the current buffer and open another
-    {from = "<leader>qq",   to = close_current_buffer},
+    {from = "<leader>qq",   to = vim.cmd.BufClose},
 
     -- Resize split panels
     {from = "<leader>sv",   to = "<C-w>v"},
