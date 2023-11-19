@@ -3,28 +3,31 @@ local opt = vim.opt
 -------------------------------------
 -- For GUIs like NeoVide
 -------------------------------------
--- get # of Active Monitor 
-function Get_connected_monitors()
-    local result = vim.fn.system('xrandr -q | grep " connected" | wc -l') --TODO: not on linux? no X open?
-    return tonumber(result)
-end
--- set display font size 
-function Set_font_size()
-    local connected_monitors = Get_connected_monitors()
 
-    if connected_monitors > 1 then
-        vim.cmd('set guifont=JetBrainsMono\\ Nerd\\ Font:h14')
-    else
-        vim.cmd('set guifont=JetBrainsMono\\ Nerd\\ Font:h10')
+if vim.g.neovide then
+    -- get # of Active Monitor 
+    function Get_connected_monitors()
+        local result = vim.fn.system('xrandr -q | grep " connected" | wc -l') -- TODO: not on linux? no X open?
+        return tonumber(result)
     end
-end
--- run the function to set font size at start
-Set_font_size()
-opt.linespace = -1
--- run the function whenever entering/leaving a buffer
-vim.cmd('autocmd FocusGained,BufEnter * lua Set_font_size()')
-vim.cmd('autocmd FocusLost,BufLeave * lua Set_font_size()')
+    -- set display font size 
+    function Set_font_size()
+        local connected_monitors = Get_connected_monitors()
 
+        if connected_monitors > 1 then
+            opt.guifont = "JetBrainsMono Nerd Font:h14"
+        else
+            opt.guifont = "JetBrainsMono Nerd Font:h10"
+        end
+    end
+    -- run the function to set font size at start
+    Set_font_size()
+    opt.linespace = -1
+    -- run the function whenever entering/leaving a buffer
+    vim.cmd('autocmd FocusGained,BufEnter * lua Set_font_size()')
+    vim.cmd('autocmd FocusLost,BufLeave * lua Set_font_size()')
+
+end
 
 
 -------------------------------------
