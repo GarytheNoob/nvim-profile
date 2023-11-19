@@ -37,7 +37,7 @@ This is my personal config of NeoVim, using [lazy.nvim](https://github.com/folke
 │       ├── telescope.lua
 │       ├── theme.lua
 │       ├── treesitter.lua
-│       └── ui.lua              # Relatex to Appearance
+│       └── ui.lua              # Related to Appearance
 ├── init.lua            # Main Entry of the config
 └── README.md           # This file
 ```
