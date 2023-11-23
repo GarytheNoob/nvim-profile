@@ -15,9 +15,9 @@ if vim.g.neovide then
         local connected_monitors = Get_connected_monitors()
 
         if connected_monitors > 1 then
-            opt.guifont = "JetBrainsMono Nerd Font:h14"
+            opt.guifont = "JetBrainsMono NF:h14"
         else
-            opt.guifont = "JetBrainsMono Nerd Font:h10"
+            opt.guifont = "JetBrainsMono NF:h10"
         end
     end
     -- run the function to set font size at start
