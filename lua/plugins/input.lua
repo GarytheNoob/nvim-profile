@@ -1,7 +1,7 @@
 return {
     {
         "mg979/vim-visual-multi",
-        event = "InsertEnter",
+        event = "BufEnter",
     },
     {
         "windwp/nvim-autopairs",
