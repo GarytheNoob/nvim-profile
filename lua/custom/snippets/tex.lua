@@ -96,7 +96,8 @@ cs(
             }),
             i(2, "")
         }
-    )
+    ),
+    "pkg"
 )
 
 cs(
@@ -114,11 +115,29 @@ cs(
 )
 
 cs(
-    "differential",
     {
-        t('{\\rm d}')
+        trig = "differential",
+        hidden = true,
+    },
+    {
+        t('{\\mathkrm d}')
     },
     "dd"
 )
+
+cs(
+    {
+        trig = "spaced_differential",
+        hidden = true,
+    },
+    {
+        t('\\,{\\mathkrm d}')
+    },
+    ",dd"
+)
+
+
+
+
 
 return snippets, autosnippets

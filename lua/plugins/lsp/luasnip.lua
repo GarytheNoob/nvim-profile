@@ -19,12 +19,12 @@ return {
             ext_opts = {
                 [types.choiceNode] = {
                     active = {
-                        virt_text = { { "[CHOICE_NODE]", "GruvboxBlue" } }, -- TODO: the highlight group need fix
+                        virt_text = { { " ⦿ ", "Title" } },
                     },
                 },
                 -- [types.insertNode] = {
                 -- 	active = {
-                -- 		virt_text = { { "●", "GruvboxBlue" } },
+                -- 		virt_text = { { " ⦿ ", "Directory" } },
                 -- 	},
                 -- },
             },
