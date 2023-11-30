@@ -13,8 +13,8 @@ local rep = require("luasnip.extras").rep
 
 local snippets, autosnippets = {}, {}
 
-local group = vim.api.nvim_create_augroup("Lua Snippets", { clear = true })
-local file_pattern = "*.lua"
+local group = vim.api.nvim_create_augroup("TeX Snippets", { clear = true })
+local file_pattern = "*.tex"
 
 local function cs(trigger, nodes, opts)
 	local snippet = s(trigger, nodes)
@@ -68,15 +68,57 @@ local function cs(trigger, nodes, opts)
 	table.insert(target_table, snippet) -- insert snippet into appropriate table
 end
 
--- Start Refactoring --
+
 cs(
     "documentclass",
     {
         t('\\documentclass{'),
         i(1, ""),
         t('}'),
-    }
+    },
+    "docc"
 )
--- End Refactoring --
+
+cs(
+    "usepackage",
+    fmt(
+        [[
+            \usepackage{}{{{}}}
+        ]],
+        {
+            c(1, {
+                t(""),
+                sn(1,{
+                    t("["),
+                    i(1, ""),
+                    t("]")
+                })
+            }),
+            i(2, "")
+        }
+    )
+)
+
+cs(
+    "frac",
+    fmt(
+        [[
+            \frac{{{}}}{{{}}}
+        ]],
+        {
+            i(1, ""),
+            i(2, ""),
+        }
+    ),
+    "//"
+)
+
+cs(
+    "differential",
+    {
+        t('{\\rm d}')
+    },
+    "dd"
+)
 
 return snippets, autosnippets

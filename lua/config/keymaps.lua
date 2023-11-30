@@ -76,8 +76,32 @@ local nmappings = {
     {from = "<leader>ip",   to = vim.cmd.IconPickerNormal},
 
     -- LuaSnip
-    {from = "<C-L>",        to = function() require("luasnip").jump(1) end, mode = {"i", "s"} },
-    {from = "<C-H>",        to = function() require("luasnip").jump(-1) end, mode = {"i", "s"} },
+    {from = "<a-l>",        to = function() require("luasnip").jump(1) end, mode = {"i", "s"} },
+    {from = "<a-h>",        to = function() require("luasnip").jump(-1) end, mode = {"i", "s"} },
+    {
+        from = "<a-j>",
+        to = function()
+            local ls = require("luasnip")
+            if ls.choice_active() then
+                ls.change_choice(1)
+            else
+                local t = os.date("*t")
+                local time = string.format("%02d:%02d:%02d", t.hour, t.min, t.sec)
+                print(time)
+            end
+        end,
+        mode = {"i", "s"}
+    },
+    {
+        from = "<a-k>",
+        to = function()
+            local ls = require("luasnip")
+            if ls.choice_active() then
+                ls.change_choice(-1)
+            end
+        end,
+        mode = {"i", "s"}
+    },
 }
 
 -- I love this way to set keybinds
