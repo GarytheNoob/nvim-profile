@@ -22,7 +22,7 @@ local commands={
                 vim.fn.shellescape(current_file_directory))
             vim.cmd(term_command)
         end
-    }
+    },
 }
 
 

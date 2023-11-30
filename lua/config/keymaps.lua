@@ -1,3 +1,20 @@
+-- FILENAME: keymaps.lua
+-- DESCRIPTION: neovim config file setting the key bindings
+-- ORIGIN: theniceboy
+--
+-- This file is partly or fully edited by
+--  ▄▄▄  ▄  ▄▄  ▄ ▄      ▄▄     
+--  █   █ █ █▄▀ █▄█   ▄█▀▀▀▀█▄  
+--  █▄█ █▀█ █ █  █   █▀      ▀▀ 
+--  ▄▄▄ ▄ ▄ ▄▄▄      █    ▀▄▄   
+--   █  █▄█ █▄▄      █▄     ▀█▄ 
+--   █  █ █ █▄▄       ▀█▄▄▄▄█▀  
+--  ▄▄▄ ▄▄▄ ▄▄▄ ▄▄     ▄▄█▀     
+--  █ █ █ █ █ █ █▄▀  ▄█▀        
+--  █ █ █▄█ █▄█ █▄▀   ▀█▄▄      
+--                       ▀▀     
+-- GitHub: https://github.com/GarytheNoob
+
 local mode_nv = { "n", "v" }
 local mode_v = { "v" }
 local mode_i = { "i" }
@@ -12,6 +29,9 @@ local nmappings = {
     -- hotkeys for saving(writing) and quitting
     {from = "<C-S>",   to = ":w<CR>"},
     {from = "<C-Q>",   to = ":qa<CR>"},
+
+    -- jump to the next `<++>` as placeholder
+    {from = "<leader>ph",   to = '<ESC>/<++><CR>:nohl<CR>"_c4l'},
 
     -- turn the highlight of after searching
     {from = "<leader>nh",   to = vim.cmd.nohl},

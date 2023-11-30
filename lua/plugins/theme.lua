@@ -12,7 +12,7 @@ return {
             vim.cmd([[
                     highlight Visual guibg=#abb2bf
                     highlight Visual gui=reverse
-                    highlight Visual guibg=#282c34
+                    highlight Visual guibg=#32363e
             ]])
         end
     },
