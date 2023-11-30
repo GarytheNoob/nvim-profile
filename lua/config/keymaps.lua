@@ -28,7 +28,7 @@ local nmappings = {
 
     -- hotkeys for saving(writing) and quitting
     {from = "<C-S>",   to = ":w<CR>"},
-    {from = "<C-Q>",   to = ":qa<CR>"},
+    {from = "<C-Q>",   to = ":q<CR>"},
 
     -- jump to the next `<++>` as placeholder
     {from = "<leader>ph",   to = '<ESC>/<++><CR>:nohl<CR>"_c4l'},
