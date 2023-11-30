@@ -79,6 +79,9 @@ opt.splitbelow = true
 opt.ignorecase = true
 opt.smartcase = true
 
+-- scrolloff
+vim.o.scrolloff = 5
+
 -- diagnostic
 vim.diagnostic.config{
     underline = false,
@@ -87,9 +90,3 @@ vim.diagnostic.config{
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-
-vim.cmd([[
-            highlight Visual guibg=#abb2bf
-            highlight Visual gui=reverse
-            highlight Visual guibg=#282c34
-        ]])
