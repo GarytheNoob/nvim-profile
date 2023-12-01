@@ -40,7 +40,7 @@ return { -- lualine
         require("lualine").setup({
             options = {
                 theme = custom_onedark_vivid,
-                ignore_focus = { "NvimTree" },
+                ignore_focus = { "NvimTree", "Outline"},
             },
         })
     end
