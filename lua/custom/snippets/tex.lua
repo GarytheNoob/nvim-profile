@@ -42,7 +42,7 @@ local snippets = {
                 i(2, "")
             }
         )
-    )
+    ),
 }
 
 local autosnippets = {
