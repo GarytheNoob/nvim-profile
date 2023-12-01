@@ -19,6 +19,8 @@ This is my personal config of NeoVim, using [lazy.nvim](https://github.com/folke
 │       ├── lsp                 # From `josean-dev/dev-environment-files`
 │       │   ├── lspconfig.lua
 │       │   ├── mason.lua
+│       │   ├── luasnip.lua
+│       │   ├── nvim-cmp.lua        # auto-complete form `josean-dev/dev-environment-files` 
 │       │   └── none-ls.lua
 │       ├── alpha-nvim.lua      # Greeting
 │       ├── bufferline.lua      # Tab line
@@ -31,8 +33,8 @@ This is my personal config of NeoVim, using [lazy.nvim](https://github.com/folke
 │       ├── lualine.lua         # Statusline
 │       ├── markdown.lua        # Preview etc.
 │       ├── misc.lua            # Other stuff
-│       ├── nvim-cmp.lua        # auto-complete form `josean-dev/dev-environment-files` 
 │       ├── nvim-tree.lua       # Side panel for directory
+│       ├── outline.lua
 │       ├── project.lua
 │       ├── telescope.lua
 │       ├── theme.lua
