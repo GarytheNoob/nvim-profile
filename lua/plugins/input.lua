@@ -14,6 +14,14 @@ return {
         end
     },
     {
+        "sustech-data/wildfire.nvim",
+        event = "VeryLazy",
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
+        config = function()
+            require("wildfire").setup()
+        end,
+    },
+    {
         "kylechui/nvim-surround",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
         event = "InsertEnter",
