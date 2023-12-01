@@ -11,8 +11,9 @@ return {
     },
     config = function()
         local cmp = require("cmp")
-
         local luasnip = require("luasnip")
+
+        vim.api.nvim_set_hl(0, "CmpItemMenu", { fg = "#828997", bg = "NONE", italic = true })
 
         local lspkind = require("lspkind")
 
@@ -23,8 +24,11 @@ return {
             completion = {
                 completeopt = "menu,menuone,preview,noselect",
             },
-            window = { -- add border to the tooltip window of cmp
+            window = {
                 completion = {
+                    winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+                    col_offset = -3,
+                    side_padding = 0,
                     border = "rounded",
                 },
                 documentation = {
@@ -54,10 +58,20 @@ return {
             }),
             -- configure lspkind for vs-code like pictograms in completion menu
             formatting = {
-                format = lspkind.cmp_format({
-                    maxwidth = 50,
-                    ellipsis_char = "...",
-                }),
+                fields = { "kind", "abbr", "menu" },
+                format = function(entry, vim_item)
+                    local kind = lspkind.cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+                    local strings = vim.split(kind.kind, "%s", { trimempty = true })
+                    kind.kind = " " .. (strings[1] or "") .. " "
+                    kind.menu = "    (" .. (strings[2] or "") .. ")"
+
+                    return kind
+                end,
+
+                -- format = lspkind.cmp_format({
+                --     maxwidth = 50,
+                --     ellipsis_char = "...",
+                -- }),
             },
         })
     end,
