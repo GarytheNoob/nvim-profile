@@ -43,8 +43,8 @@ local nmappings = {
     {from = "<leader>sv",   to = "<C-w>v"},
     {from = "<leader>sh",   to = "<C-w>s"},
     {from = "<leader>ww",   to = "<C-w>="},
-    {from = "<leader>w,",   to = "<C-w><"}, -- TODO: This need another keybind
-    {from = "<leader>w.",   to = "<C-w>>"},
+    {from = "H",   to = "<C-w><"}, -- TODO: This need another keybind
+    {from = "L",   to = "<C-w>>"},
 
     -- Show Lazy Menu
     {from = "<leader>lz",   to = vim.cmd.Lazy},
@@ -103,6 +103,11 @@ local nmappings = {
         end,
         mode = {"i", "s"}
     },
+
+    -- Symbols_outline
+    {from = "<leader>o",    to = vim.cmd.Outline},
+
+
 }
 
 -- I love this way to set keybinds
