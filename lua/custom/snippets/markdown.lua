@@ -11,8 +11,6 @@ local sn = ls.snippet_node
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
 
--- --
-
 local snippets = {}
 local autosnippets = {}
 
@@ -52,6 +50,62 @@ end
 -- Utility Functions --
 
 -- Start Refactoring --
+
+cs(
+    "bold",
+    fmt(
+        [[**{}**]],
+        i(1, "")
+    ),
+    "<C-b>"
+)
+
+cs(
+    "italic",
+    fmt(
+        [[*{}*]],
+        i(1, "")
+    ),
+    "<C-i>"
+)
+
+cs(
+    "deleteline",
+    fmt(
+        [[~~{}~~]],
+        i(1, "")
+    ),
+    "<C-d>"
+)
+
+cs(
+    "link",
+    fmt(
+        [[
+            [{}]({})
+        ]],
+        {
+            i(1, "text"),
+            i(2, "link")
+        }
+    ),
+    "<C-l>"
+)
+
+cs(
+    "picture",
+    fmt(
+        [[
+            ![{}]({})
+        ]],
+        {
+            i(1, ""),
+            i(2, "link")
+        }
+    ),
+    "<C-p>"
+)
+
 
 -- Start Refactoring --
 
