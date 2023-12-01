@@ -46,39 +46,39 @@ local snippets = {
 }
 
 local autosnippets = {
-    s(
-        "//",
-        fmt(
-            [[
-            \frac{{{}}}{{{}}}
-        ]],
-            {
-                i(1, ""),
-                i(2, ""),
-            }
-        ),
-        {
-            condition = is_math -- TODO: WHY THIS DOESN'T WORK??
-        }
-    ),
-    s(
-        "dd",
-        {
-            t('{\\mathrm d}')
-        },
-        {
-            condition = is_math
-        }
-    ),
-    s(
-        "spd",
-        {
-            t('\\,{\\mathrm d}')
-        },
-        {
-            condition = is_math
-        }
-    )
+    -- s(
+    --     "//",
+    --     fmt(
+    --         [[
+    --         \frac{{{}}}{{{}}}
+    --     ]],
+    --         {
+    --             i(1, ""),
+    --             i(2, ""),
+    --         }
+    --     ),
+    --     {
+    --         condition = is_math -- TODO: WHY THIS DOESN'T WORK??
+    --     }
+    -- ),
+    -- s(
+    --     "dd",
+    --     {
+    --         t('{\\mathrm d}')
+    --     },
+    --     {
+    --         condition = is_math
+    --     }
+    -- ),
+    -- s(
+    --     "spd",
+    --     {
+    --         t('\\,{\\mathrm d}')
+    --     },
+    --     {
+    --         condition = is_math
+    --     }
+    -- )
 }
 
 

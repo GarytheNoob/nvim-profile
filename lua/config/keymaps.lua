@@ -76,7 +76,8 @@ local nmappings = {
     {from = "<leader>ip",   to = vim.cmd.IconPickerNormal},
 
     -- LuaSnip
-    {from = "<a-l>",        to = function() require("luasnip").jump(1) end, mode = {"i", "s"} },
+    {from = "<a-a>",        to = function() require("luasnip").expand() end, mode = {"i", "s"} },
+    {from = "<a-l>",        to = function() require("luasnip").jump(1)  end, mode = {"i", "s"} },
     {from = "<a-h>",        to = function() require("luasnip").jump(-1) end, mode = {"i", "s"} },
     {
         from = "<a-j>",
@@ -85,9 +86,7 @@ local nmappings = {
             if ls.choice_active() then
                 ls.change_choice(1)
             else
-                local t = os.date("*t")
-                local time = string.format("%02d:%02d:%02d", t.hour, t.min, t.sec)
-                print(time)
+                vim.notify("No choices available.")
             end
         end,
         mode = {"i", "s"}
@@ -98,6 +97,8 @@ local nmappings = {
             local ls = require("luasnip")
             if ls.choice_active() then
                 ls.change_choice(-1)
+            else
+                vim.notify("No choices available.")
             end
         end,
         mode = {"i", "s"}
