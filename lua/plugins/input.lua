@@ -29,4 +29,7 @@ return {
             require("nvim-surround").setup()
         end
     },
+    {
+        "h-hg/fcitx.nvim",
+    }
 }
