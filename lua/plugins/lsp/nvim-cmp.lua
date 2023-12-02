@@ -13,12 +13,16 @@ return {
         local cmp = require("cmp")
         local luasnip = require("luasnip")
 
-        vim.api.nvim_set_hl(0, "CmpItemMenu", { fg = "#828997", bg = "NONE", italic = true })
 
         local lspkind = require("lspkind")
 
         -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
         require("luasnip.loaders.from_vscode").lazy_load()
+
+        vim.api.nvim_set_hl(0, "CmpItemMenu", { fg = "#828997", bg = "NONE", italic = true })
+        vim.api.nvim_set_hl(0, "CmpItemAbbrDeprecated", { fg = "#ABB2BF", bg = "NONE", strikethrough = true })
+        vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#61AFEF", bg = "NONE", bold = true })
+        vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#61AFEF", bg = "NONE", bold = true })
 
         cmp.setup({
             completion = {

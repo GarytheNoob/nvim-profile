@@ -77,5 +77,12 @@ return {
             capabilities = capabilities,
         })
 
+        -- configure bashls
+        lspconfig.bashls.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+        })
+
+
     end,
 }
