@@ -14,20 +14,20 @@ return {
         end
     },
     {
-        "rcarriga/nvim-notify",
-        config = function ()
-            require("notify").setup({
-                max_winth = 15,
-                minimum_width = 5
-            })
-            vim.notify = require("notify")
-        end
-    },
-    {
         "folke/noice.nvim",
         event = "VeryLazy",
         dependencies = {
             "MunifTanjim/nui.nvim",
+            {
+                "rcarriga/nvim-notify",
+                config = function ()
+                    require("notify").setup({
+                        max_winth = 15,
+                        minimum_width = 5
+                    })
+                    vim.notify = require("notify")
+                end
+            },
         },
         config = function()
             require("noice").setup({
@@ -65,4 +65,5 @@ return {
             require("telescope").load_extension("noice")
         end
     },
+    {"shortcuts/no-neck-pain.nvim", version = "*"}
 }
