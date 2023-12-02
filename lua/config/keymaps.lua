@@ -31,7 +31,7 @@ local nmappings = {
     {from = "<C-Q>",   to = vim.cmd.q},
 
     -- jump to the next `<++>` as placeholder
-    {from = "<leader>ph",   to = '<ESC>/<++><CR>:nohl<CR>"_c4l'},
+    {from = "<a-n>",   to = '<ESC>/<++><CR>:nohl<CR>"_c4l',    mode = mode_i},
 
     -- turn the highlight of after searching
     {from = "<leader>nh",   to = vim.cmd.nohl},
@@ -43,8 +43,10 @@ local nmappings = {
     {from = "<leader>sv",   to = "<C-w>v"},
     {from = "<leader>sh",   to = "<C-w>s"},
     {from = "<leader>ww",   to = "<C-w>="},
-    {from = "H",   to = "<C-w><"}, -- TODO: This need another keybind
-    {from = "L",   to = "<C-w>>"},
+	{from = "<up>",         to = ":res +2<CR>", },
+	{from = "<down>",       to = ":res -2<CR>", },
+	{from = "<left>",       to = ":vertical resize-2<CR>", },
+	{from = "<right>",      to = ":vertical resize+2<CR>", },
 
     -- Show Lazy Menu
     {from = "<leader>lz",   to = vim.cmd.Lazy},
