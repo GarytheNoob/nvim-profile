@@ -8,17 +8,16 @@ return {
                     cursorline = true,
                 }
             })
+
             vim.cmd("colorscheme onedark_vivid")
-            vim.cmd([[
-                    highlight Visual guibg=#abb2bf
-                    highlight Visual gui=reverse
-                    highlight Visual guibg=#32363e
-            ]])
+
+            vim.api.nvim_set_hl(0, "Visual", { bg = "#2e4c77" })
         end
     },
     {
         "rmehri01/onenord.nvim",
         priority = 1000
     },
-    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, }
+    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, },
+    { "tandy1229/nvim-deus" }
 }

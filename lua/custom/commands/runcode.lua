@@ -1,4 +1,5 @@
 local split = function()
+    -- split a pane below
     vim.cmd([[
         set splitbelow
         sp
@@ -19,6 +20,9 @@ local compileRun = function()
 	elseif ft == 'c' then
 		split()
 		vim.cmd("term gcc % -o %< && ./%< && rm %<")
+	elseif ft == 'cpp' then
+		split()
+		vim.cmd("term g++ % -o %< && ./%< && rm %<")
 	elseif ft == 'javascript' then
 		split()
 		vim.cmd("term node %")
