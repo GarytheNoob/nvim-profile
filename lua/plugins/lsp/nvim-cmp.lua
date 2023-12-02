@@ -11,14 +11,15 @@ return {
     },
     config = function()
         local cmp = require("cmp")
+        local compare = cmp.config.compare
+
         local luasnip = require("luasnip")
-
-
         local lspkind = require("lspkind")
 
         -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
         require("luasnip.loaders.from_vscode").lazy_load()
 
+        -- set highlight color for cmp menu
         vim.api.nvim_set_hl(0, "CmpItemMenu", { fg = "#828997", bg = "NONE", italic = true })
         vim.api.nvim_set_hl(0, "CmpItemAbbrDeprecated", { fg = "#ABB2BF", bg = "NONE", strikethrough = true })
         vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = "#61AFEF", bg = "NONE", bold = true })
@@ -71,11 +72,17 @@ return {
 
                     return kind
                 end,
+            },
 
-                -- format = lspkind.cmp_format({
-                --     maxwidth = 50,
-                --     ellipsis_char = "...",
-                -- }),
+            -- config the sorting
+            -- from yt: @Yuki Uthman
+            sorting = {
+                comparators = {
+                    compare.recently_used,
+                    compare.kind,
+                    compare.exact,
+                    compare.length,
+                },
             },
         })
     end,
