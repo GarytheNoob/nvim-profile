@@ -40,13 +40,19 @@ local nmappings = {
     {from = "<leader>qq",   to = vim.cmd.BufClose},
 
     -- Resize split panels
+    {from = "<leader>sh",   to = ":set nosplitright<CR>:vsplit<CR>:set splitright<CR>", },
+	{from = "<leader>sj",   to = ":set splitbelow<CR>:split<CR>", },
+    {from = "<leader>sk",   to = ":set nosplitbelow<CR>:split<CR>:set splitbelow<CR>", },
+	{from = "<leader>sl",   to = ":set splitright<CR>:vsplit<CR>", },
     {from = "<leader>sv",   to = "<C-w>v"},
     {from = "<leader>sh",   to = "<C-w>s"},
-    {from = "<leader>ww",   to = "<C-w>="},
+    {from = "<leader>ss",   to = "<C-w>="},
 	{from = "<up>",         to = ":res +2<CR>", },
 	{from = "<down>",       to = ":res -2<CR>", },
 	{from = "<left>",       to = ":vertical resize-2<CR>", },
 	{from = "<right>",      to = ":vertical resize+2<CR>", },
+	{from = "<leader>srh",  to = "<C-w>b<C-w>K", },
+	{from = "<leader>srv",  to = "<C-w>b<C-w>H", },
 
     -- Show Lazy Menu
     {from = "<leader>lz",   to = vim.cmd.Lazy},
