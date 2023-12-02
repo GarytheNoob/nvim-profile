@@ -3,6 +3,7 @@ local commands={
     require("custom.commands.bufclose"),
     require("custom.commands.lazygit"),
     require("custom.commands.openterm"),
+    require("custom.commands.runcode"),
 }
 
 

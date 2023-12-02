@@ -27,8 +27,8 @@ local nmappings = {
     {from = "J",   to = ":m '>+1<CR>gv=gv",   mode = mode_v},
 
     -- hotkeys for saving(writing) and quitting
-    {from = "<C-S>",   to = ":w<CR>"},
-    {from = "<C-Q>",   to = ":q<CR>"},
+    {from = "<C-S>",   to = vim.cmd.w},
+    {from = "<C-Q>",   to = vim.cmd.q},
 
     -- jump to the next `<++>` as placeholder
     {from = "<leader>ph",   to = '<ESC>/<++><CR>:nohl<CR>"_c4l'},
@@ -108,7 +108,8 @@ local nmappings = {
     -- Symbols_outline
     {from = "<leader>o",    to = vim.cmd.Outline},
 
-
+    -- run code
+    {from = "<leader>rr",   to = vim.cmd.RunCode}
 }
 
 -- I love this way to set keybinds
