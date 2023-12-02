@@ -14,6 +14,10 @@ This is my personal config of NeoVim, using [lazy.nvim](https://github.com/folke
 │   │   ├── options.lua         # Options
 │   │   └── plugin.lua          # Entry of `lazy.nvim`
 │   ├── custom              # Custom settings
+│   │   ├── snippets            # Custom LuaSnip snippets
+│   │   │   ├── boilerplate.lua     # template
+│   │   │   ├── markdown.lua
+│   │   │   └── tex.lua
 │   │   └── commands.lua        # Definition of user commands
 │   └── plugins             # Plugins
 │       ├── lsp                 # From `josean-dev/dev-environment-files`
