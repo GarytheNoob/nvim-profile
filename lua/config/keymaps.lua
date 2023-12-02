@@ -68,6 +68,7 @@ local nmappings = {
 
     -- toggleterm
     {from = "<leader>tt",   to = vim.cmd.OpenTerm},
+    {from = "<leader>gg",   to = vim.cmd.Lazygit},
 
     -- display greeting screeen
     {from = "<leader>grt",  to = vim.cmd.Alpha},
