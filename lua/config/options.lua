@@ -90,3 +90,5 @@ vim.diagnostic.config{
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Markdown preview setting: use chromium
+vim.g.mkdp_browser = 'chromium'

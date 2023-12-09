@@ -4,4 +4,3 @@
 
 This is my personal config of NeoVim, using [lazy.nvim](https://github.com/folke/lazy.nvim) as the plugin manager.
 
-

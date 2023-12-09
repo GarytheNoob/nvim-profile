@@ -31,7 +31,7 @@ local nmappings = {
     {from = "<C-Q>",   to = vim.cmd.q},
 
     -- jump to the next `<++>` as placeholder
-    {from = "<a-n>",   to = '<ESC>/<++><CR>:nohl<CR>"_c4l',    mode = mode_i},
+    {from = "<A-n>",   to = '<ESC>/<++><CR>:nohl<CR>"_c4l',    mode = mode_i},
 
     -- turn the highlight of after searching
     {from = "<leader>nh",   to = vim.cmd.nohl},
@@ -85,9 +85,9 @@ local nmappings = {
     {from = "<leader>ip",   to = vim.cmd.IconPickerNormal},
 
     -- LuaSnip
-    {from = "<a-a>",        to = function() require("luasnip").expand() end, mode = {"i", "s"} },
-    {from = "<a-l>",        to = function() require("luasnip").jump(1)  end, mode = {"i", "s"} },
-    {from = "<a-h>",        to = function() require("luasnip").jump(-1) end, mode = {"i", "s"} },
+    {from = "<A-a>",        to = function() require("luasnip").expand() end, mode = {"i", "s"} },
+    {from = "<A-l>",        to = function() require("luasnip").jump(1)  end, mode = {"i", "s"} },
+    {from = "<A-h>",        to = function() require("luasnip").jump(-1) end, mode = {"i", "s"} },
     {
         from = "<a-j>",
         to = function()
