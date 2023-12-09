@@ -11,17 +11,16 @@ return {
             require("colorizer").setup()
         end,
     },
-    {
-        "yamatsum/nvim-cursorline",
-        config = function()
-            require('nvim-cursorline').setup {
-                cursorline = { enable = false },
-                cursorword = {
-                    enable = true,
-                    min_length = 3,
-                    hl = { underline = true },
-                }
-            }
-        end
-    },
+	{
+		"RRethy/vim-illuminate",
+		config = function()
+			require('illuminate').configure({
+				providers = {
+					-- 'lsp',
+					-- 'treesitter',
+					'regex',
+				},
+			})
+		end
+	},
 }
