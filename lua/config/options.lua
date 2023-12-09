@@ -92,3 +92,6 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Markdown preview setting: use chromium
 vim.g.mkdp_browser = 'chromium'
+
+-- enter insert mode in terminal
+vim.api.nvim_create_autocmd({ "TermOpen" }, { command = "startinsert" })
