@@ -45,7 +45,6 @@ local nmappings = {
     {from = "<leader>sk",   to = ":set nosplitbelow<CR>:split<CR>:set splitbelow<CR>", },
 	{from = "<leader>sl",   to = ":set splitright<CR>:vsplit<CR>", },
     {from = "<leader>sv",   to = "<C-w>v"},
-    {from = "<leader>sh",   to = "<C-w>s"},
     {from = "<leader>ss",   to = "<C-w>="},
 	{from = "<up>",         to = ":res +2<CR>", },
 	{from = "<down>",       to = ":res -2<CR>", },
