@@ -44,18 +44,6 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
--- no wrap except certain filetype
-opt.wrap = false
-vim.cmd([[
-  augroup MarkdownSettings
-    autocmd!
-    autocmd FileType markdown setlocal wrap
-    autocmd FileType markdown setlocal textwidth=80
-    autocmd FileType tex setlocal wrap
-    autocmd FileType tex setlocal textwidth=80
-  augroup END
-]])
-
 -- visual
 opt.termguicolors = true
 opt.colorcolumn = {80}
@@ -64,6 +52,7 @@ opt.background = "dark"
 
 -- format
 opt.formatoptions="tcromqlw"
+opt.textwidth = 80
 
 -- use mouse
 opt.mouse:append("a")
