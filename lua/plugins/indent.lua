@@ -1,4 +1,4 @@
-return { 
+return {
     {
 		"shellRaining/hlchunk.nvim",
 		init = function()
@@ -8,7 +8,7 @@ return {
 					enable = true,
 					use_treesitter = true,
 					style = {
-						{ fg = "#7f848e" },
+						{ fg = "#608086" },
 					},
 				},
 				indent = {
@@ -22,7 +22,8 @@ return {
 					enable = false,
 				},
 				line_num = {
-					use_treesitter = true,
+                    enable = false,
+					-- use_treesitter = true,
 				},
 			})
 		end
