@@ -116,7 +116,10 @@ local nmappings = {
     {from = "<leader>o",    to = vim.cmd.Outline},
 
     -- run code
-    {from = "<leader>rr",   to = vim.cmd.RunCode}
+    {from = "<leader>rr",   to = vim.cmd.RunCode},
+
+    -- lsp fix
+    {from = "<C-f>", to = vim.lsp.buf.code_action, mode = {"n", "i"}}
 }
 
 -- I love this way to set keybinds
