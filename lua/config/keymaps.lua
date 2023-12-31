@@ -67,11 +67,11 @@ local nmappings = {
     {from = "<leader>F",    to = vim.cmd.HopPattern},
 
     -- treesitter
-    {from = "<leader>ff",   to = require('telescope.builtin').find_files},
-    {from = "<leader>fg",   to = require('telescope.builtin').live_grep},
-    {from = "<leader>fb",   to = require('telescope.builtin').buffers},
-    {from = "<leader>fh",   to = require('telescope.builtin').help_tags},
-    {from = "<leader>fr",   to = require('telescope.builtin').oldfiles},
+    { from = "<leader>ff",  to = require('telescope.builtin').find_files },
+    { from = "<leader>fg",  to = require('telescope.builtin').live_grep },
+    { from = "<leader>fb",  to = require('telescope.builtin').buffers },
+    { from = "<leader>fh",  to = require('telescope.builtin').help_tags },
+    { from = "<leader>fr",  to = require('telescope.builtin').oldfiles },
 
     -- toggleterm
     {from = "<leader>tt",   to = vim.cmd.OpenTerm},
