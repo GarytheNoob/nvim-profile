@@ -33,7 +33,7 @@ local nmappings = {
     -- jump to the next `<++>` as placeholder
     {from = "<A-n>",   to = '<ESC>/<++><CR>:nohl<CR>"_c4l',    mode = mode_i},
 
-    -- turn the highlight of after searching
+    -- turn the highlight off after searching
     {from = "<leader>nh",   to = vim.cmd.nohl},
 
     -- close the current buffer and open another
