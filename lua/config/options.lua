@@ -1,32 +1,33 @@
-local opt = vim.opt
-local env = vim.env
-local g   = vim.g
+local opt                      = vim.opt
+local env                      = vim.env
+local g                        = vim.g
 
 -------------------------------------
 -- General Config
 -------------------------------------
 -- gutters
-opt.relativenumber = true
-opt.number = true
-opt.signcolumn = "yes"
+opt.relativenumber             = true
+opt.number                     = true
+opt.signcolumn                 = "yes"
 
 -- tab
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-opt.autoindent = true
+opt.tabstop                    = 4
+opt.shiftwidth                 = 4
+opt.expandtab                  = true
+opt.autoindent                 = true
 
 -- visual
-opt.ttyfast = true
-opt.termguicolors = true
+opt.ttyfast                    = true
+opt.termguicolors              = true
 env.NVIM_TUI_ENABLE_TRUE_COLOR = 1
-opt.colorcolumn = { 80 }
-opt.cursorline = true
-opt.background = "dark"
+opt.colorcolumn                = { 80 }
+opt.cursorline                 = true
+opt.background                 = "dark"
+opt.wrap                       = false
 
 -- format
-opt.formatoptions = "tcromqlw"
-opt.textwidth = 80
+opt.formatoptions              = "tcromqlw"
+opt.textwidth                  = 80
 
 -- use mouse
 opt.mouse:append("a")
