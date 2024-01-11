@@ -29,6 +29,16 @@ return {
             require("nvim-surround").setup()
         end
     },
+    {
+        'echasnovski/mini.align',
+        lazy = true,
+        event = { "BufReadPre", "BufNewFile" },
+        opts = {
+            mappings = {
+                start = 'ga',
+            },
+        }
+    },
     -- {
     --     "h-hg/fcitx.nvim",
     -- }
