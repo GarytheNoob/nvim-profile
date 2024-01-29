@@ -24,41 +24,42 @@ opt.colorcolumn                = { 80 }
 opt.cursorline                 = true
 opt.background                 = "dark"
 opt.wrap                       = false
+opt.guifont                    = "JetBrainsMono NF:h14"
 
 -- format
 opt.formatoptions              = "tcromqlw"
 opt.textwidth                  = 80
 
--- use mouse
-opt.mouse:append("a")
-
 -- keybind init
-g.mapleader = " "
-
--- use system clipboard
-opt.clipboard:append("unnamedplus")
+g.mapleader                    = " "
 
 -- enable spliting window/pane
-opt.splitright = true
-opt.splitbelow = true
+opt.splitright                 = true
+opt.splitbelow                 = true
 
 -- cmd cases
-opt.ignorecase = true
-opt.smartcase = true
+opt.ignorecase                 = true
+opt.smartcase                  = true
 
 -- scrolloff
-vim.o.scrolloff = 5
+vim.o.scrolloff                = 5
+
+g.loaded_netrw                 = 1
+g.loaded_netrwPlugin           = 1
+
+-- Markdown preview setting: use chromium
+g.mkdp_browser                 = 'chromium'
 
 -- diagnostic
 vim.diagnostic.config {
     underline = false,
 }
 
-g.loaded_netrw = 1
-g.loaded_netrwPlugin = 1
+-- use mouse
+opt.mouse:append("a")
 
--- Markdown preview setting: use chromium
-g.mkdp_browser = 'chromium'
+-- use system clipboard
+opt.clipboard:append("unnamedplus")
 
 -- enter insert mode in terminal
 vim.api.nvim_create_autocmd({ "TermOpen" }, { command = "startinsert" })
