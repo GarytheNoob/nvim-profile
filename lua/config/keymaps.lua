@@ -100,7 +100,7 @@ local nmappings = {
 
     -- lsp fix
     { from = "<C-f>",       to = vim.lsp.buf.code_action,                               mode = mode_ni },
-                                                                                                       }
+}
 
 -- I love this way to set keybinds
 for _, mapping in ipairs(nmappings) do
