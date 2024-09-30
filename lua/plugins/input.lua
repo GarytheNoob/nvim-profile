@@ -8,6 +8,7 @@ return {
         event = "InsertEnter",
         config = function()
             require("nvim-autopairs").setup({
+                disable_filetype = { "TelescopePrompt", "spectre_panel", "tex"},
                 map_cr = true,
                 map_bs = false
             })
