@@ -58,8 +58,8 @@ local nmappings = {
     -- Show Lazy Menu
     { from = "<leader>lz",  to = vim.cmd.Lazy,                                          mode = mode_n  },
 
-    -- nvim-tree
-    { from = "<leader>e",   to = vim.cmd.NvimTreeToggle,                                mode = mode_n  },
+    -- -- nvim-tree
+    { from = "<leader>e",   to = ":Neotree toggle<CR>",                                 mode = mode_n  },
 
     -- buffer
     { from = "<leader>K",   to = vim.cmd.bnext,                                         mode = mode_n  },
