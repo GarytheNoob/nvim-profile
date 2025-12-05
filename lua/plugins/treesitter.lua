@@ -8,7 +8,13 @@ return {
 
             require'nvim-treesitter.configs'.setup {
                 -- languages
-                ensure_installed = "all",
+                ensure_installed = {
+                    "python",
+                    "c",
+                    "lua",
+                    "cpp",
+                    "markdown",
+                },
                 auto_install = true,
                 sync_install = true,
                 ignore_install = {"ipkg",},

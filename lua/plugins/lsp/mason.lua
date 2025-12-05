@@ -29,8 +29,14 @@ return {
             ensure_installed = {
                 "bashls",
                 "lua_ls",
-                "pyright",
+                -- "pyright",
             },
+            sources = {
+                "nvim_lsp",
+                "luasnip",
+            },
+            -- automatic_enable = false, --disable
+            -- handlers = {},
             -- auto-install configured servers (with lspconfig)
             automatic_installation = true, -- not the same as ensure_installed
         })

@@ -1,5 +1,6 @@
 return {
     "L3MON4D3/LuaSnip", -- snippet engine
+    version = "v2.*",
 
     config = function ()
         local status_ok, ls= pcall(require, "luasnip")
