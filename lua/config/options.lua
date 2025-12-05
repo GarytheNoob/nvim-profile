@@ -63,3 +63,15 @@ opt.clipboard:append("unnamedplus")
 
 -- enter insert mode in terminal
 vim.api.nvim_create_autocmd({ "TermOpen" }, { command = "startinsert" })
+
+opt.list = true
+vim.opt.listchars = {
+  tab = '» ',       -- Represents a tab as a right-angle arrow and a space
+  trail = '·',      -- Represents trailing spaces as a middle dot
+  -- eol = '↲',        -- Represents the end of a line as a curved arrow
+  nbsp = '␣',       -- Represents non-breaking spaces as a hollow space character
+  extends = '>',    -- Represents lines that extend beyond the screen width
+  precedes = '<',   -- Represents lines that precede the visible screen area
+  lead = ' ',       -- Represents leading spaces (single)
+  space = '·',
+}
