@@ -10,11 +10,12 @@ local split = function()
 end
 local compileRun = function()
 	vim.cmd("w")
+    vim.cmd("lcd " .. vim.fn.expand("%:p:h"))
 	-- check file type
 	local ft = vim.bo.filetype
 	if ft == "python" then
         split()
-		vim.cmd("term python %")
+		vim.cmd("term python3 %")
 	elseif ft == "markdown" then
 		vim.cmd(":MarkdownPreview")
 	elseif ft == 'c' then
