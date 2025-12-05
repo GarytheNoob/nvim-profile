@@ -86,11 +86,11 @@ local nmappings = {
     { from = "<leader>ip",  to = vim.cmd.IconPickerNormal,                              mode = mode_n  },
 
     -- LuaSnip
-    { from = "<A-a>",       to = function() require("luasnip").expand() end,            mode = mode_is },
-    { from = "<A-l>",       to = function() require("luasnip").jump(1) end,             mode = mode_is },
-    { from = "<A-h>",       to = function() require("luasnip").jump(-1) end,            mode = mode_is },
-    { from = "<a-j>",       to = require("config.user.luasnipfunc").prevchoice,         mode = mode_is },
-    { from = "<a-k>",       to = require("config.user.luasnipfunc").nextchoice,         mode = mode_is },
+    { from = "<D-a>",       to = function() require("luasnip").expand() end,            mode = mode_is },
+    { from = "<D-l>",       to = function() require("luasnip").jump(1) end,             mode = mode_is },
+    { from = "<D-h>",       to = function() require("luasnip").jump(-1) end,            mode = mode_is },
+    { from = "<D-j>",       to = require("config.user.luasnipfunc").prevchoice,         mode = mode_is },
+    { from = "<D-k>",       to = require("config.user.luasnipfunc").nextchoice,         mode = mode_is },
 
     -- Symbols_outline
     { from = "<leader>o",   to = vim.cmd.Outline,                                       mode = mode_n  },
