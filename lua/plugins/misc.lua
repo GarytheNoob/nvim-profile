@@ -11,18 +11,18 @@ return {
             require("colorizer").setup()
         end,
     },
-	{
-		"RRethy/vim-illuminate",
-		config = function()
-			require('illuminate').configure({
-				providers = {
-					-- 'lsp',
-					-- 'treesitter',
-					'regex',
-				},
-			})
-		end
-	},
+    {
+        "RRethy/vim-illuminate",
+        config = function()
+            require('illuminate').configure({
+                providers = {
+                    -- 'lsp',
+                    -- 'treesitter',
+                    'regex',
+                },
+            })
+        end
+    },
     {
         'noearc/jieba.nvim',
         dependencies = {'noearc/jieba-lua'},
