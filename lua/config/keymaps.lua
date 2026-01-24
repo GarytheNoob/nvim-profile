@@ -31,8 +31,8 @@ local nmappings = {
     { from = "J",           to = ":m '>+1<CR>gv = gv",                                  mode = mode_v  },
 
     -- hotkeys for saving(writing) and quitting
-    { from = "<C-S>",       to = vim.cmd.w,                                             mode = mode_n  },
-    { from = "<C-Q>",       to = vim.cmd.q,                                             mode = mode_n  },
+    -- { from = "<C-S>",       to = vim.cmd.w,                                             mode = mode_n  },
+    -- { from = "<C-Q>",       to = vim.cmd.q,                                             mode = mode_n  },
 
     -- jump to the next `<++>` as placeholder
     { from = "<A-n>",       to = '<ESC>/<++><CR>:nohl<CR>"_c4l',                        mode = mode_i  },
