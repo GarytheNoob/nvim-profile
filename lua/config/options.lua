@@ -41,14 +41,18 @@ opt.splitbelow                 = true
 opt.ignorecase                 = true
 opt.smartcase                  = true
 
+-- modeline
+opt.modeline                   = true
+opt.modelines                  = 5
+
 -- scrolloff
 vim.o.scrolloff                = 5
 
 g.loaded_netrw                 = 1
 g.loaded_netrwPlugin           = 1
 
--- Markdown preview setting: use chromium
-g.mkdp_browser                 = 'chromium'
+-- Markdown preview setting:
+g.mkdp_browser                 = 'zen'
 
 -- diagnostic
 vim.diagnostic.config {
