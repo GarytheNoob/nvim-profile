@@ -21,18 +21,38 @@ return {
             keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
             keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
             keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
-            keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
-            keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
-            keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+            keymap.set(
+                "n",
+                "gi",
+                "<cmd>Telescope lsp_implementations<CR>",
+                opts
+            ) -- show lsp implementations
+            keymap.set(
+                "n",
+                "gt",
+                "<cmd>Telescope lsp_type_definitions<CR>",
+                opts
+            ) -- show lsp type definitions
+            keymap.set(
+                { "n", "v" },
+                "<leader>ca",
+                vim.lsp.buf.code_action,
+                opts
+            ) -- see available code actions, in visual mode will apply to selection
             keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
-            keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+            keymap.set(
+                "n",
+                "<leader>D",
+                "<cmd>Telescope diagnostics bufnr=0<CR>",
+                opts
+            ) -- show  diagnostics for file
             keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
             keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
             keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
             keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
             keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
         end
-        
+
         -- used to enable autocompletion (assign to every lsp server config)
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
@@ -52,22 +72,26 @@ return {
                     [vim.diagnostic.severity.INFO] = " ",
                 },
                 linehl = {
-                    [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+                    [vim.diagnostic.severity.ERROR] = "ErrorMsg",
                 },
                 numhl = {
-                    [vim.diagnostic.severity.WARN] = 'WarningMsg',
+                    [vim.diagnostic.severity.WARN] = "WarningMsg",
                 },
             },
         })
 
         -- configure python server
-        vim.lsp.config('basedpyright', {
+        vim.lsp.config("basedpyright", {
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+        vim.lsp.config("pyright", {
             capabilities = capabilities,
             on_attach = on_attach,
         })
 
         -- configure lua server (with special settings)
-        vim.lsp.config('lua_ls', {
+        vim.lsp.config("lua_ls", {
             capabilities = capabilities,
             on_attach = on_attach,
             settings = { -- custom settings for lua
@@ -88,22 +112,21 @@ return {
         })
 
         -- configure clangd
-        vim.lsp.config('clangd', {
+        vim.lsp.config("clangd", {
             on_attach = on_attach,
             capabilities = capabilities,
         })
 
         -- configure bashls
-        vim.lsp.config('bashls', {
+        vim.lsp.config("bashls", {
             on_attach = on_attach,
             capabilities = capabilities,
         })
 
         -- configure texlab
-        vim.lsp.config('texlab', {
+        vim.lsp.config("texlab", {
             on_attach = on_attach,
             capabilities = capabilities,
         })
-
     end,
 }
