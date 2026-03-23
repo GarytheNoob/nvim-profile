@@ -85,10 +85,6 @@ return {
             capabilities = capabilities,
             on_attach = on_attach,
         })
-        vim.lsp.config("pyright", {
-            capabilities = capabilities,
-            on_attach = on_attach,
-        })
 
         -- configure lua server (with special settings)
         vim.lsp.config("lua_ls", {
